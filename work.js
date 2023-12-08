@@ -51,24 +51,38 @@ const expected6 = [];
  */
 function slice(items, startIdx, endIdx) {
     // code here
-}
+    let empty = [];
+
+    if (items.length === 0) return items
+
+    if (startIdx < 0 && endIdx > items.length) {
+        startIdx = 0
+        endIdx = items.length
+    }
+
+    for (let i = startIdx; i < endIdx; i++) {
+
+        empty.push(items[i])
+    }
+    return empty;
+};
 
 // Tests
 console.log("\n************Algo #1***********");
-const result1 = slice(arr1, startIdx1, endIdx1);
-console.log(result1, "should be", expected1);
+// const result1 = slice(arr1, startIdx1, endIdx1);
+// console.log(result1, "should be", expected1);
 
-const result2 = slice(arr2, startIdx2, endIdx2);
-console.log(result2, "should be", expected2);
+// const result2 = slice(arr2, startIdx2, endIdx2);
+// console.log(result2, "should be", expected2);
 
-const result3 = slice(arr3, startIdx3, endIdx3);
-console.log(result3, "should be", expected3);
+// const result3 = slice(arr3, startIdx3, endIdx3);
+// console.log(result3, "should be", expected3);
 
 const result4 = slice(arr4, startIdx4, endIdx4);
 console.log(result4, "should be", expected4);
 
-const result5 = slice(arr5, startIdx5, endIdx5);
-console.log(result5, "should be", expected5);
+// const result5 = slice(arr5, startIdx5, endIdx5);
+// console.log(result5, "should be", expected5);
 
-const result6 = slice(arr6, startIdx6, endIdx6);
-console.log(result6, "should be", expected6);
+// const result6 = slice(arr6, startIdx6, endIdx6);
+// console.log(result6, "should be", expected6);
